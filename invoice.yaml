@@ -1,0 +1,58 @@
+# id: '06/2024' # [default: month/year]
+# issue_date: '2024-06-25' # default: today
+# due_date: '2024-07-10' # default: issue_date + 15 days
+
+contractor:
+  name: THE CONTRACTOR
+  info: | # default: none
+    _Additional info_
+  address: # default: none
+    country: COUNTRY # default: none
+    city: CITY # default: none
+    street: |- # default: none
+      STREET LINE
+    postal_code: 'POSTAL CODE' # default: none
+  email: contractor@example.com # default: none
+  tel: '+1 123 45 67 89' # default: none
+
+billed_to:
+  name: THE COMPANY
+  info: | # default: none
+    _Additional info_
+  address: # default: none
+    country: COUNTRY # default: none
+    city: CITY # default: none
+    street: |- # default: none
+      STREET LINE
+    postal_code: 'POSTAL CODE' # default: none
+  email: finance@company.com # default: none
+
+service:
+  description: |
+      Software development services
+  # period: # default: none
+  #   from: '2024-06-01' # default: start of month for issue_date
+  #   to: '2024-06-30' # default: end of month for issue_date
+  contract: # default: none
+    ref: REFERENCE_NUMBER
+    dated: '2024-06-05' # default: none
+  amount: 3000
+
+additional_items: # default: none
+  - description: Coworking compensation
+    amount: 63.73
+
+payment:
+  chain:
+    name: Ethereum Mainnet
+    explorer_address_template: https://etherscan.io/address/{} # default: none
+  token:
+    symbol: USDT
+    name: Tether USD
+    address: '0xdAC17F958D2ee523a2206206994597C13D831ec7'
+  wallet: '0x11111111111111111111111111111111111111'
+
+signature:
+  name: CONTRACTOR NAME # default: contractor.name
+  location: Country, City # default: none
+  sign: ./signature.png # default: none

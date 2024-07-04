@@ -20,7 +20,10 @@
       from *#format_date(service.period.from)*
       to *#format_date(service.period.to)*
       #if "contract" in service [
-        under the contract _#service.contract.ref _
+        under the contract
+        #if "ref" in service.contract [
+          _#service.contract.ref _
+        ]
         #if "dated" in service.contract [
           dated #format_date(service.contract.dated)
         ]

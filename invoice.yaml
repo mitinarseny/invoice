@@ -25,7 +25,9 @@ billed_to:
     street: |- # default: none
       STREET LINE
     postal_code: 'POSTAL CODE' # default: none
-  email: finance@company.com # default: none
+  email: # default: none
+    - finance@company.com
+    - hr@company.com
 
 service:
   description: |

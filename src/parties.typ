@@ -28,7 +28,11 @@
   [],
   [
     #if "email" in details [
-      _e-mail:_: #mailto(details.email)
+      _e-mail_: #if type(details.email) == array {
+        details.email
+      } else {
+        (details.email,)
+      }.map(mailto).join(", ")
     ] \
     #if "tel" in details [
       _tel_: #tel(details.tel)
